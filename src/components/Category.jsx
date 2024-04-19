@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Memo from "/src/components/Memo.jsx"
 
-const Category = ({title}) => {
+function Category({ title, memos }) {
+  
   return (
     <div className="w-full h-full ">
       <h3 className="w-full font-semibold text-2xl mb-4">{title}</h3>
       <div className="flex flex-col gap-4">
-        <Memo />
-        <Memo />
-        <Memo />
-        <Memo />
+        {memos && memos.map((memo, i) => (
+          <Memo key={i} content={memo.content} category={memo.category} tags={memo.tags} />
+        ))}
       </div>
     </div>
   )
