@@ -9,7 +9,7 @@ const Memo = ({content, category, tags}) => {
       </p>
       <div className="flex gap-2">
         {tags.map((tag) => (
-          <Tag small>{tag}</Tag>
+          <Tag small color={tag.color} key={tag.name}>{tag.name}</Tag>
         ))}
       </div>
     </div>
