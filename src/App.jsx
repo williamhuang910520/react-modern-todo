@@ -50,7 +50,7 @@ function App() {
     <MemoContent.Provider value={{allMemo, setAllMemo}}>
       <DndProvider backend={HTML5Backend}>
         <div className="flex justify-center">
-          <div className="container p-8 gap-4 flex flex-col">
+          <div className="container max-w-5xl p-8 gap-4 flex flex-col">
             <div className="flex gap-2">
               <input type="text" 
                 className=" w-full h-12 px-4 border-[1.5px] rounded-lg"

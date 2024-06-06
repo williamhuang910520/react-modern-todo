@@ -24,7 +24,7 @@ export default Tag
 export const TagSelector = forwardRef(({ tags, onToggleTag }, ref)  => {
 
   return (
-    <div ref={ref} className="absolute z-10 -right-[1px] top-[32px] w-auto h-min rounded-lg select-none overflow-hidden shadow-lg bg-white">
+    <div ref={ref} className="absolute z-10 -right-[1px] top-[32px] w-32 h-min p-2 rounded-xl select-none overflow-hidden shadow-lg bg-white">
       {Object.values(TAGS).map((tag, index) => 
         <TagSelectorItem 
           name={tag.name} 
@@ -41,9 +41,9 @@ const TagSelectorItem = ({name, isChecked, onToggleTag, tag }) => {
 
 
   return (
-    <label className="flex gap-2 py-2 px-4 hover:bg-gray-100">
+    <label className="flex gap-2 py-1 px-4 rounded-lg hover:bg-gray-100">
       <input type="checkbox" className="rounded-lg" id={name} defaultChecked={isChecked} onChange={()=>onToggleTag(tag)} />
-      <span className='text-sm'>{name}</span>
+      <span className='text-sm ml-1'>{name}</span>
     </label>
   )
 }

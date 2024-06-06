@@ -39,7 +39,7 @@ function Category({ categoryTitle, memos }) {
   }))
   
   return (
-    <div ref={dropRef} className="w-[270px] h-full">
+    <div ref={dropRef} className="w-full h-full">
       <h3 className="w-full font-semibold text-2xl mb-4">{categoryTitle}</h3>
       {memos.filter(memo=>memo.pin===true).length != 0 && 
         <div className="flex flex-col gap-4">

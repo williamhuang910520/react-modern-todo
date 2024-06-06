@@ -40,32 +40,52 @@ export const CATEGORY = {
 export const testData = [
   {
     content: {
-      title: "Test Title 1",
-      subhead: "Test Data 1"
+      title: "✏️ 基本筆記編輯",
+      subhead: "將滑鼠移到筆記下方，可進行編輯刪除操作\n移到筆記右上方可釘選。"
     },
     category: CATEGORY.TODO,
-    tags: [TAGS.tag1, TAGS.tag2],
+    tags: [TAGS.tag1],
     pin: true,
     uuid: "0736c6c2-9fd6-433f-8196-c96ac14a7cf2"
   },
   {
     content: {
-      title: "Test Title 2",
-      subhead: "Test Data 2"
+      title: "📄 新增筆記",
+      subhead: "將滑鼠移到欄位最下方以新增筆記。"
     },
-    category: CATEGORY.Doing,
-    tags: [TAGS.tag3, TAGS.tag2],
-    pin: true,
+    category: CATEGORY.TODO,
+    tags: [TAGS.tag1],
+    pin: false,
+    uuid: "d8ecc44c-deab-43eb-bd62-0404d0cd8d95"
+  },
+  {
+    content: {
+      title: "🔍 搜尋筆記",
+      subhead: "利用上方的搜尋欄位以及Tag選擇，可以快速尋找筆記。"
+    },
+    category: CATEGORY.Finish,
+    tags: [TAGS.tag1],
+    pin: false,
     uuid: "5308ca13-c71b-4c4d-b7ad-8e46dc511673"
   },
   {
     content: {
-      title: "Test Title 3",
-      subhead: "Test Data 3"
+      title: "🤚 拖曳筆記",
+      subhead: "可以將筆記拖曳到其他欄位。"
     },
-    category: CATEGORY.Finish,
-    tags: [TAGS.tag4, TAGS.tag2, TAGS.tag3],
-    pin: true,
+    category: CATEGORY.Doing,
+    tags: [TAGS.tag1],
+    pin: false,
     uuid: "c69c1df6-4a5e-416e-bcb5-acf7f13d42f0"
+  },
+  {
+    content: {
+      title: "6/13 網頁報告",
+      subhead: "就算畢業了還是要報告的可憐大學生 (›´ω`‹ )"
+    },
+    category: CATEGORY.Doing,
+    tags: [TAGS.tag1, TAGS.tag4],
+    pin: false,
+    uuid: "dde029c7-6508-4bf2-8f59-afb677337e9f"
   },
 ]
