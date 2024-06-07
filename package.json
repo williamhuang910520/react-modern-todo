@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://williamhuang910520.github.io/react-modern-todo",
+  "homepage": "https://williamhuang910520.github.io/react-modern-todo/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
