@@ -16,5 +16,5 @@ React + Tailwind + ReactDND
 
 <div style="display: flex; ">
     <img src="src/assets/react.png" alt="drawing" style="height: 24px;"/>
-    <img src="src/assets/tailwind.png" alt="drawing" style="height: 24px;"/>
+    <img src="src/assets/tailwind.png" alt="drawing" style="height: 20px;"/>
 </div>
