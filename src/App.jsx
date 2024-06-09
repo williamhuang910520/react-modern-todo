@@ -67,7 +67,7 @@ function App() {
                 +
               </div>
             </div>
-            <div className="flex gap-4 mt-8">
+            <div className="flex flex-wrap gap-4 mt-8">
               <Category categoryTitle="TODO" memos={filteredMemo.filter((memo) => memo.category == CATEGORY.TODO)} />
               <Category categoryTitle="Doing" memos={filteredMemo.filter((memo) => memo.category == CATEGORY.Doing)} />
               <Category categoryTitle="Finish" memos={filteredMemo.filter((memo) => memo.category == CATEGORY.Finish)} />

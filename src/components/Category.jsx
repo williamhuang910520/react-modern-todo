@@ -6,6 +6,16 @@ import { Memo } from "/src/components/Memo.jsx"
 
 function Category({ categoryTitle, memos }) {
 
+  const [isPhone, setIsPhone] = useState(false)
+  useEffect(() => {
+    let ua = navigator.userAgent;
+    let android = ua.indexOf("Android") > -1 || ua.indexOf("Adr") > -1; // android
+    let ios = !!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); // ios
+     
+    // 將變數存入 state 可以用來做其他樣式判斷
+    setIsPhone(android || ios)
+}, []); 
+
   const [isAdding, setIsAdding] = useState(false)
 
   const [memoData, setMemoData] = useState({
@@ -39,7 +49,7 @@ function Category({ categoryTitle, memos }) {
   }))
   
   return (
-    <div ref={dropRef} className="w-full h-full">
+    <div ref={dropRef} className="flex-1 min-w-64">
       <h3 className="w-full font-semibold text-2xl mb-4">{categoryTitle}</h3>
       {memos.filter(memo=>memo.pin===true).length != 0 && 
         <div className="flex flex-col gap-4">
@@ -58,9 +68,9 @@ function Category({ categoryTitle, memos }) {
           .map((memo, i) => (
           <Memo key={memo.uuid} memo={memo} />
         ))}
-      <div className="w-full h-12 group/newMemo ">
+      <div className="w-full group/newMemo ">
         {!isAdding && <button 
-          className='w-full h-full rounded-lg border-[1.5px] invisible group-hover/newMemo:visible' 
+          className={`w-full h-12 rounded-lg border-[1.5px] ${isPhone?"visible":"invisible"} group-hover/newMemo:visible`}
           onClick={()=>{setIsAdding(true)}}>
 			      <Icon className='m-auto w-[20px] h-[20px]' icon="material-symbols:add"></Icon>
           </button>}
