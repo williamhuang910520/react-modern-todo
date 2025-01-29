@@ -118,7 +118,7 @@ export const Memo = ({ memo, edit, onComplete }) => {
   return (
     <>
       {editable ?
-        <div className="w-full border-[1.5px] rounded-lg p-4 flex flex-col gap-3 relative">
+        <div className="w-full border-[1.5px] rounded-lg p-4 flex flex-col gap-3 relative bg-white">
           <div className='flex flex-col gap-1'>
             <input
               type="text"
@@ -156,7 +156,7 @@ export const Memo = ({ memo, edit, onComplete }) => {
           </div>
         </div>
         :
-        <div ref={dragRef} className="w-full border-[1.5px] rounded-lg p-4 flex flex-col gap-3 relative">
+        <div ref={dragRef} className="w-full border-[1.5px] rounded-lg p-4 flex flex-col gap-3 relative bg-white">
           <div className='flex flex-col gap-1'>
             <p className="text-lg font-semibold">{myMemo.content.title}</p>
             <p className=" text-base text-wrap whitespace-pre-wrap">{myMemo.content.subhead}</p>
